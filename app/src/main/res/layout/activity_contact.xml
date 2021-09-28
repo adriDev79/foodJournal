@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.ContactActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/ib_home_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_baseline_home_24"
+                android:contentDescription="@string/todo"
+                android:onClick="home"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:text="@string/contact"
+                android:textColor="@color/gris"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_contact_sms"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:elevation="6dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/grid_arrondi"
+            android:onClick="sendSMSAndCall">
+
+            <TextView
+                android:id="@+id/tv_contact_sms"
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="80"
+                android:text="@string/appel_ou_sms"
+                android:textSize="17sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/iv_contact_sms"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_baseline_sms_24"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_contact_email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="6dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/grid_arrondi"
+            android:onClick="sendEmail">
+
+            <TextView
+                android:id="@+id/tv_contact_email"
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="80"
+                android:text="@string/envoyer_un_email"
+                android:textSize="17sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/iv_update_username"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_baseline_email_24"
+                android:contentDescription="@string/todo" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/adresse"
+            android:textColor="@color/gris"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/adresse_nutritionniste"
+            android:textColor="@color/gris"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/map"
+            android:onClick="openMap"/>
+
+    </GridLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

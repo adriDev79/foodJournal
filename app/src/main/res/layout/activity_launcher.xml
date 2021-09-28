@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/launcher_background"
+tools:context=".activity.LauncherActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/journal_alimentaire"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:background="@color/couleur_principal"/>
+
+    <ProgressBar
+        android:id="@+id/pb_circular"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="400dp"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/pb_design" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:text="v1.0.0"
+        android:textColor="@color/couleur_principal"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</GridLayout>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragment.Journee">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <GridLayout
+                android:id="@+id/gl_impression_journee"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:elevation="6dp"
+                android:background="@drawable/grid_arrondi_grid_layout">
+
+                <TextView
+                    android:id="@+id/tv_impression_journee"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="Impression de la journée"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/gris"/>
+
+                <TableLayout
+                    android:id="@+id/tl_impression_journee"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    >
+                </TableLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_impression_journee"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_row="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_column="0">
+
+                    <EditText
+                        android:id="@+id/et_impression_journee"
+                        android:layout_width="fill_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="15"
+                        android:layout_marginBottom="20dp"
+                        android:textColor="@color/gris"
+                        android:textColorHint="@color/gris"
+                        android:singleLine="true"
+                        android:hint="@string/ajouter_details" />
+
+                    <ImageButton
+                        android:id="@+id/iv_validation_impression_journee"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="88"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_baseline_check_24"
+                        android:background="@drawable/grid_arrondi_petit_validation"
+                        android:onClick="add"
+                        tools:ignore="ContentDescription,OnClick" />
+
+                </LinearLayout>
+            </GridLayout>
+            <GridLayout
+                android:id="@+id/gl_type_journee"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:elevation="6dp"
+                android:background="@drawable/grid_arrondi_grid_layout"
+                android:layout_below="@id/gl_impression_journee">
+
+                <TextView
+                    android:id="@+id/tv_type_journee"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/type_de_journee"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/gris"/>
+
+                <TableLayout
+                    android:id="@+id/tl_type_journee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    >
+                </TableLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_type_journee"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_row="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_column="0">
+
+                    <EditText
+                        android:id="@+id/et_type_journee"
+                        android:layout_width="fill_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="15"
+                        android:textColor="@color/gris"
+                        android:textColorHint="@color/gris"
+                        android:singleLine="true"
+                        android:hint="@string/ajouter_details"/>
+
+                    <ImageButton
+                        android:id="@+id/iv_validation_type_journee"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="88"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_baseline_check_24"
+                        android:background="@drawable/grid_arrondi_petit_validation"
+                        android:onClick="add"
+                        tools:ignore="OnClick" />
+
+                </LinearLayout>
+            </GridLayout>
+            <GridLayout
+                android:id="@+id/gl_activite_physique"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:elevation="6dp"
+                android:background="@drawable/grid_arrondi_grid_layout"
+                android:layout_below="@id/gl_type_journee">
+
+                <TextView
+                    android:id="@+id/tv_activite_physique"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/activit_physique"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/gris"/>
+
+                <CheckBox
+                    android:id="@+id/ctv_activite_physique"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:text="@string/sport"
+                    android:textColor="@color/gris"
+                    android:textSize="15sp"
+                    android:onClick="update"
+                    tools:ignore="OnClick" />
+
+                <TableLayout
+                    android:id="@+id/tl_activite_physique"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    >
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_activite_physique"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_row="3"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_column="0">
+
+                    <EditText
+                        android:id="@+id/et_activite_physique"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="15"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gris"
+                        android:textColorHint="@color/gris"
+                        android:singleLine="true"
+                        android:hint="@string/ajouter_details"/>
+
+                    <ImageButton
+                        android:id="@+id/iv_validation_activite_physique"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="88"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_baseline_check_24"
+                        android:background="@drawable/grid_arrondi_petit_validation"
+                        android:onClick="add"
+                        tools:ignore="OnClick" />
+
+                </LinearLayout>
+            </GridLayout>
+            <GridLayout
+                android:id="@+id/gl_hydratation"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:elevation="6dp"
+                android:background="@drawable/grid_arrondi_grid_layout"
+                android:layout_below="@id/gl_activite_physique">
+
+                <TextView
+                    android:id="@+id/tv_hydratation"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/hydratation"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/gris"/>
+
+                <TableLayout
+                    android:id="@+id/tl_hydratation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0">
+                </TableLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_hydratation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_row="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_column="0">
+
+                    <EditText
+                        android:id="@+id/et_hydratation"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="15"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gris"
+                        android:textColorHint="@color/gris"
+                        android:singleLine="true"
+                        android:hint="@string/ajouter_details"/>
+
+                    <ImageButton
+                        android:id="@+id/iv_validation_hydratation"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="88"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_baseline_check_24"
+                        android:background="@drawable/grid_arrondi_petit_validation"
+                        android:onClick="add"
+                        tools:ignore="OnClick" />
+
+                </LinearLayout>
+            </GridLayout>
+            <GridLayout
+                android:id="@+id/gl_alcool"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:elevation="6dp"
+                android:background="@drawable/grid_arrondi_grid_layout"
+                android:layout_below="@id/gl_hydratation">
+
+                <TextView
+                    android:id="@+id/tv_alcool"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/alcool"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/gris"
+                    />
+
+                <CheckBox
+                    android:id="@+id/ctv_alcool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:text="@string/alcool_cochez_si_vous_avez_bu"
+                    android:textColor="@color/gris"
+                    android:textSize="15sp"
+                    android:onClick="update"
+                    tools:ignore="OnClick" />
+
+                <TableLayout
+                    android:id="@+id/tl_alcool"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    >
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_alcool"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal">
+
+                    <EditText
+                        android:id="@+id/et_alcool"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="15"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gris"
+                        android:textColorHint="@color/gris"
+                        android:singleLine="true"
+                        android:hint="@string/ajouter_details"/>
+
+                    <ImageButton
+                        android:id="@+id/iv_validation_alcool"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="88"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_baseline_check_24"
+                        android:background="@drawable/grid_arrondi_petit_validation"
+                        android:onClick="add"
+                        tools:ignore="OnClick" />
+
+                </LinearLayout>
+            </GridLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

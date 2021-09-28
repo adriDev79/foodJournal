@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/repas"
+        android:icon="@drawable/ic_baseline_fastfood_24"
+        android:title="@string/bottom_navigation_repas" />
+    <item
+        android:id="@+id/journee"
+        android:icon="@drawable/ic_baseline_fact_check_24"
+        android:title="@string/bottom_navigation_journée" />
+</menu>

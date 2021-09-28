@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tr_tr_meal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/grid_table_row"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/tv_table_row_meal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="95"
+        android:layout_marginStart="10dp"
+        android:text=""
+        android:textColor="@color/gris"
+        android:textSize="15sp"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_tr_meal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/grid_arrondi_vert"
+        android:src="@drawable/ic_baseline_clear_24"
+        android:onClick="deleteIngredient"/>
+
+    <TextView
+        android:id="@+id/tv_table_row_id_element_meal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="1dp"
+        />
+    <TextView
+        android:id="@+id/tv_table_row_id_meal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="1dp"
+        />
+</TableRow>

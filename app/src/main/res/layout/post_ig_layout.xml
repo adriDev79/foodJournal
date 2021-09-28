@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="250dp"
+        android:layout_height="240dp"
+        android:background="@drawable/grid_arrondi_post_ig">
+
+        <ImageView
+            android:id="@+id/iv_logo_ig"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/instagram"/>
+
+        <TextView
+            android:id="@+id/tv_name_ig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="13dp"
+            android:text="@string/username_ig"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_toEndOf="@+id/iv_logo_ig"/>
+
+        <ImageView
+            android:id="@+id/iv_photo_ig"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/burger"/>
+    </GridLayout>
