@@ -81,7 +81,7 @@ public class RestService {
                                         TextView tv_username = relativeLayout.findViewById(R.id.tv_name_ig);
                                         ImageView iv_photo = relativeLayout.findViewById(R.id.iv_photo_ig);
                                         tv_username.setText(postIG.getUsername());
-                                        Picasso.get().load(postIG.getMediaUrl()).resize(300, 270).into(iv_photo);
+                                        Picasso.get().load(postIG.getMediaUrl()).resize(334, 270).into(iv_photo);
                                         relativeLayout.setOnClickListener(new View.OnClickListener() {
                                             @Override
                                             public void onClick(View v) {

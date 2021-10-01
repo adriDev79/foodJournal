@@ -7,11 +7,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         LinearLayout ll_journal = findViewById(R.id.ll_journal);
         LinearLayout ll_envoi_journal = findViewById(R.id.ll_email);
+        ImageView iv_insta = findViewById(R.id.iv_insta);
         inflater = getLayoutInflater();
 
         MainHelper mh = new MainHelper();
@@ -61,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
         } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();
         }
+        iv_insta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uriUrl = Uri.parse("https://www.instagram.com/adri_dev_web/?hl=fr");
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                ctx.startActivity(launchBrowser);
+            }
+        });
     }
 
     @Override

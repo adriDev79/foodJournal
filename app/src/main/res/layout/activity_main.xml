@@ -8,6 +8,7 @@
     tools:context=".activity.MainActivity">
 
     <GridLayout
+        android:id="@+id/ig_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -71,8 +72,9 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:text="@string/day"
-                        android:textColor="@color/gris"
+                        android:textColor="@color/white"
                         android:textSize="20sp"
+                        android:textStyle="bold"
                         android:textAlignment="center"
                         tools:ignore="RtlCompat" />
 
@@ -98,7 +100,8 @@
                         android:layout_gravity="center_vertical"
                         android:text="@string/envoyer_son_journal"
                         android:textAlignment="center"
-                        android:textColor="@color/gris"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
                         android:textSize="20sp"
                         tools:ignore="RtlCompat" />
                 </LinearLayout>
@@ -124,7 +127,8 @@
                         android:layout_gravity="center_vertical"
                         android:text="@string/contact"
                         android:textAlignment="center"
-                        android:textColor="@color/gris"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
                         android:textSize="20sp"
                         tools:ignore="RtlCompat" />
                 </LinearLayout>
@@ -147,7 +151,7 @@
         <HorizontalScrollView
             android:id="@+id/sv_post_ig"
             android:layout_width="fill_parent"
-            android:layout_height="250dp"
+            android:layout_height="230dp"
             android:layout_row="3"
             android:layout_column="0"
             android:layout_marginTop="30dp">
@@ -160,5 +164,32 @@
 
             </LinearLayout>
         </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:text=" developed by Adrien Durand"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/iv_insta"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/instagram" />
+        </LinearLayout>
     </GridLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

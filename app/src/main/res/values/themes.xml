@@ -3,7 +3,7 @@
     <style name="Theme.AppFood" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/black</item>
-        <item name="colorPrimaryVariant">@color/couleur_principal</item>
+        <item name="colorPrimaryVariant">@color/gris</item>
         <item name="colorOnPrimary">@color/gris</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/gris</item>
