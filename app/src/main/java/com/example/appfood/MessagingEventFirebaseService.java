@@ -32,7 +32,6 @@ public class MessagingEventFirebaseService extends FirebaseMessagingService {
             channel.setDescription(channel_desc);
             notificationManager.createNotificationChannel(channel);
             notification.setChannelId(channel_id);
-
         }
         notification.notify();
 
